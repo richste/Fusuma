@@ -108,6 +108,7 @@ public struct ImageMetadata {
 
     public var cropHeightRatio: CGFloat = 1
     public var allowMultipleSelection: Bool = false
+    public var maximumSelectableImages = 5
 
     fileprivate var mode: FusumaMode = .library
     
@@ -165,6 +166,7 @@ public struct ImageMetadata {
         menuView.backgroundColor = fusumaBackgroundColor
 
         albumView.allowMultipleSelection = allowMultipleSelection
+        albumView.maximumSelectableImages = maximumSelectableImages
         
         libraryButton.tintColor = fusumaTintColor
         cameraButton.tintColor  = fusumaTintColor
