@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -60,15 +59,36 @@
                         <constraint firstAttribute="trailing" secondItem="Mc5-1c-z7q" secondAttribute="trailing" id="sKD-NK-t20"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hv-Ae-EdM" userLabel="Placeholder Container">
+                    <rect key="frame" x="87" y="241" width="226.5" height="18"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an image from your library" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiD-Ir-RrQ">
+                            <rect key="frame" x="0.0" y="0.0" width="226.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tiD-Ir-RrQ" firstAttribute="top" secondItem="3hv-Ae-EdM" secondAttribute="top" id="2I1-tF-xMt"/>
+                        <constraint firstAttribute="bottom" secondItem="tiD-Ir-RrQ" secondAttribute="bottom" id="b6c-VX-CkC"/>
+                        <constraint firstItem="tiD-Ir-RrQ" firstAttribute="leading" secondItem="3hv-Ae-EdM" secondAttribute="leading" id="naM-F0-pLU"/>
+                        <constraint firstAttribute="trailing" secondItem="tiD-Ir-RrQ" secondAttribute="trailing" id="o5e-m5-Jm5"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="3hv-Ae-EdM" firstAttribute="centerX" secondItem="90B-0c-ych" secondAttribute="centerX" id="0GF-cf-w9A"/>
                 <constraint firstAttribute="trailing" secondItem="90B-0c-ych" secondAttribute="trailing" id="7re-q7-aoD"/>
                 <constraint firstAttribute="bottom" secondItem="9Cu-Zp-X0j" secondAttribute="bottom" id="94b-v2-S3a"/>
                 <constraint firstItem="90B-0c-ych" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nqq-tJ-MXy"/>
                 <constraint firstAttribute="trailing" secondItem="9Cu-Zp-X0j" secondAttribute="trailing" id="Uhw-Pi-jJn"/>
                 <constraint firstItem="9Cu-Zp-X0j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gu4-5B-2qu"/>
+                <constraint firstItem="3hv-Ae-EdM" firstAttribute="centerY" secondItem="90B-0c-ych" secondAttribute="centerY" id="rty-f3-CJy"/>
+                <constraint firstItem="3hv-Ae-EdM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="syc-UJ-8pn"/>
                 <constraint firstItem="90B-0c-ych" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="u5j-7G-j99"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3hv-Ae-EdM" secondAttribute="trailing" constant="30" id="vps-To-68F"/>
                 <constraint firstItem="9Cu-Zp-X0j" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zCK-Xd-fZp"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -79,7 +99,9 @@
                 <outlet property="imageCropView" destination="Mc5-1c-z7q" id="oCj-GQ-fQS"/>
                 <outlet property="imageCropViewConstraintTop" destination="u5j-7G-j99" id="8dd-IK-PW2"/>
                 <outlet property="imageCropViewContainer" destination="90B-0c-ych" id="UNv-Xg-Rcp"/>
+                <outlet property="placeholderView" destination="3hv-Ae-EdM" id="Yz2-9Y-8Ha"/>
             </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="154.72263868065968"/>
         </view>
     </objects>
 </document>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,18 +21,47 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eyB-Pn-Cz7">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     </imageView>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8b-mn-6Tj">
+                        <rect key="frame" x="22" y="4" width="24" height="16"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/2" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XsH-2p-7Sr">
+                                <rect key="frame" x="4" y="2" width="16" height="12"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XsH-2p-7Sr" firstAttribute="top" secondItem="o8b-mn-6Tj" secondAttribute="top" constant="2" id="8GQ-vE-hRq"/>
+                            <constraint firstAttribute="height" constant="16" id="TUh-y5-L0T"/>
+                            <constraint firstAttribute="trailing" secondItem="XsH-2p-7Sr" secondAttribute="trailing" constant="4" id="WGe-rv-4vg"/>
+                            <constraint firstItem="XsH-2p-7Sr" firstAttribute="leading" secondItem="o8b-mn-6Tj" secondAttribute="leading" constant="4" id="huU-Dq-1Ki"/>
+                            <constraint firstAttribute="width" constant="24" id="sue-M5-Xsu"/>
+                            <constraint firstAttribute="bottom" secondItem="XsH-2p-7Sr" secondAttribute="bottom" constant="2" id="xMv-Fb-hS5"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="eyB-Pn-Cz7" secondAttribute="bottom" id="7nt-Ev-pzc"/>
                 <constraint firstItem="eyB-Pn-Cz7" firstAttribute="leading" secondItem="xyV-m5-VJN" secondAttribute="leading" id="Tri-pb-OD8"/>
                 <constraint firstAttribute="trailing" secondItem="eyB-Pn-Cz7" secondAttribute="trailing" id="hLc-zq-PCS"/>
+                <constraint firstAttribute="trailing" secondItem="o8b-mn-6Tj" secondAttribute="trailing" constant="4" id="hqr-HN-CtW"/>
+                <constraint firstItem="o8b-mn-6Tj" firstAttribute="top" secondItem="xyV-m5-VJN" secondAttribute="top" constant="4" id="qZN-Pc-KN5"/>
                 <constraint firstItem="eyB-Pn-Cz7" firstAttribute="top" secondItem="xyV-m5-VJN" secondAttribute="top" id="unD-44-W5K"/>
             </constraints>
             <connections>
                 <outlet property="imageView" destination="eyB-Pn-Cz7" id="OJW-qf-zy1"/>
+                <outlet property="numberIndicator" destination="o8b-mn-6Tj" id="kVY-eC-QGw"/>
+                <outlet property="numberIndicatorLabel" destination="XsH-2p-7Sr" id="5Rs-fR-DlV"/>
             </connections>
-            <point key="canvasLocation" x="252" y="306"/>
+            <point key="canvasLocation" x="250.72463768115944" y="305.70652173913044"/>
         </collectionViewCell>
     </objects>
 </document>
